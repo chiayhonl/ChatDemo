@@ -11,9 +11,9 @@ import java.net.Socket;
 public class ChatServer {
     public static void main(String[] args) {
         try {
-            ServerSocket ss = new ServerSocket(8888);
+            ServerSocket server = new ServerSocket(8888);
             while (true) {
-                Socket s = ss.accept();
+                Socket socket = server.accept();
 System.out.println("一个客户端连接成功");
             }
         } catch (IOException e) {

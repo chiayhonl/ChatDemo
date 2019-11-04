@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.net.Socket;
 
 /**
  * @author Chiayhon
@@ -34,6 +36,7 @@ public class ChatClient extends Frame {
         });
         inputText.addActionListener(new TextFieldAdapter());
         this.setVisible(true);
+        this.connect();
     }
 
     private class TextFieldAdapter implements ActionListener {
@@ -43,6 +46,15 @@ public class ChatClient extends Frame {
             String s = inputText.getText();
             outputText.setText(s);
             inputText.setText("");
+        }
+    }
+
+    public void connect(){
+        try {
+            Socket socket = new Socket("192.168.1.185" , 8888);
+System.out.println("已连接服务器");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
