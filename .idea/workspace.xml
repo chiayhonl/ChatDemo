@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6dcc61-65d6-4cc5-878d-4dc0754bcb7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,31 +21,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chat/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+            <state relative-caret-position="142">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#179#180#0" expanded="true" />
                 <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#657#750#1" />
                 <element signature="class#TextFieldAdapter#0;class#ChatClient#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chat/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="5">
+              <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#handle#0;class#ChatServer#0" />
-                <element signature="class#ClientThread#0;class#ChatServer#0" />
+                <element signature="e#365#421#0" />
+                <element signature="e#446#527#0" />
+                <element signature="e#549#594#0" />
+                <element signature="e#720#966#0" />
+                <element signature="e#1038#1092#0" />
+                <element signature="e#1101#1297#0" />
+                <element signature="e#1119#1212#0" />
+                <element signature="e#1235#1287#0" />
+                <element signature="method#ClientThread#0;class#ClientThread#0;class#ChatServer#0" />
+                <element signature="e#2314#2382#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://E:/java/jdk1.8/src.zip!/java/lang/Thread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="747" selection-start-line="747" selection-end-line="747" />
             </state>
           </provider>
         </entry>
@@ -74,8 +93,8 @@
         <option value="$PROJECT_DIR$/src/chat/Server/ChatServer.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/chat/Client/ChatClient.java" />
-        <option value="$PROJECT_DIR$/src/chat/ChatClient.java" />
         <option value="$PROJECT_DIR$/src/chat/ChatServer.java" />
+        <option value="$PROJECT_DIR$/src/chat/ChatClient.java" />
       </list>
     </option>
   </component>
@@ -141,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572904123298" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572911444060" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ChatApp.iml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -169,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChatClient(3)">
+  <component name="RunManager" selected="Application.ChatClient(2)">
     <configuration name="ChatClient(1)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="chat.ChatClient" />
       <module name="ChatApp" />
@@ -246,12 +265,12 @@
       <updated>1572847210166</updated>
       <workItem from="1572847212017" duration="1678000" />
       <workItem from="1572849433713" duration="1844000" />
-      <workItem from="1572851485505" duration="21608000" />
+      <workItem from="1572851485505" duration="28466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25130000" />
+    <option name="totallyTimeSpent" value="31988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
@@ -266,7 +285,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.9030303" side_tool="true" weight="0.22989276" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.04398827" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18768328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -274,7 +293,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2170088" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20967741" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -460,27 +479,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatClient.java">
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        <state relative-caret-position="5">
+          <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="class#TextFieldAdapter#0;class#ChatClient#0" />
+            <element signature="e#365#421#0" />
+            <element signature="e#446#527#0" />
+            <element signature="e#549#594#0" />
+            <element signature="e#720#966#0" />
+            <element signature="e#1038#1092#0" />
+            <element signature="e#1101#1297#0" />
+            <element signature="e#1119#1212#0" />
+            <element signature="e#1235#1287#0" />
+            <element signature="method#ClientThread#0;class#ClientThread#0;class#ChatServer#0" />
+            <element signature="e#2314#2382#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatServer.java">
+    <entry file="jar://E:/java/jdk1.8/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="122">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#handle#0;class#ChatServer#0" />
-            <element signature="class#ClientThread#0;class#ChatServer#0" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#657#750#1" />
+            <element signature="class#TextFieldAdapter#0;class#ChatClient#0" />
           </folding>
         </state>
       </provider>
