@@ -17,6 +17,8 @@ public class ChatClient extends Frame {
 
     Socket socket = null;
 
+    DataOutputStream dos = null;
+
     TextField inputText = new TextField();
 
     TextArea outputText = new TextArea();
@@ -25,37 +27,66 @@ public class ChatClient extends Frame {
         new ChatClient().launchFrame();
     }
 
+    //窗口初始化
     public void launchFrame(){
         setLocation(300 , 400);
         setSize(500 , 600);
+
         add(inputText , BorderLayout.SOUTH);
         add(outputText , BorderLayout.NORTH);
         pack();
+
+        //窗口监听器
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                dispose();//关闭当前窗口组件
-//                System.exit(0);//关闭虚拟机
+                disConnect();
+System.out.println("连接已断开");
+//                dispose();//关闭当前窗口组件
+                System.exit(0);//关闭虚拟机
             }
         });
+
+        //TextField监听器
         inputText.addActionListener(new TextFieldAdapter());
+
         this.setVisible(true);
         this.connect();
     }
 
+    //连接服务器
+    public void connect(){
+        try {
+            socket = new Socket("192.168.1.185" , 8888);
+            dos = new DataOutputStream(socket.getOutputStream());
+System.out.println("已连接服务器");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void disConnect(){
+        try {
+            dos.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    //TextField监听器
     private class TextFieldAdapter implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            String str = inputText.getText();
+            String str = inputText.getText().trim();
             outputText.setText(str);
             inputText.setText("");
 
             try {
-                DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                 dos.writeUTF(str);
                 dos.flush();
-                dos.close();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
@@ -64,12 +95,5 @@ public class ChatClient extends Frame {
         }
     }
 
-    public void connect(){
-        try {
-            socket = new Socket("192.168.1.185" , 8888);
-System.out.println("已连接服务器");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 }

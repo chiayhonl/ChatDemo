@@ -10,15 +10,33 @@ import java.net.Socket;
  * @create 2019 - 11 - 04
  */
 public class ChatServer {
+
+
+
     public static void main(String[] args) {
+
+        boolean started = false;
+
+
         try {
             ServerSocket server = new ServerSocket(8888);
-            while (true) {
+            started = true;
+
+            //监听控制
+            while (started) {
+                boolean connected = false;
+
                 Socket socket = server.accept();
 System.out.println("一个客户端连接成功");
-
                 DataInputStream dis = new DataInputStream(socket.getInputStream());
-                System.out.println(dis.readUTF());
+                connected = true;
+
+                //数据读取控制
+                while (connected) {
+                    String str = dis.readUTF();
+                    System.out.println(str);
+                }
+
                 dis.close();
             }
         } catch (IOException e) {
