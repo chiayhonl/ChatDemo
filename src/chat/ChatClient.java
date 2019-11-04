@@ -1,4 +1,4 @@
-package chat.Client;
+package chat;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -36,11 +36,7 @@ public class ChatClient extends Frame {
         this.setVisible(true);
     }
 
-    private void addWindowListener(TextFieldAdapter textFieldAdapter) {
-    }
-
     private class TextFieldAdapter implements ActionListener {
-
 
         @Override
         public void actionPerformed(ActionEvent e) {
