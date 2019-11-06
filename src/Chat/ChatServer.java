@@ -1,4 +1,4 @@
-package chat;
+package Chat;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

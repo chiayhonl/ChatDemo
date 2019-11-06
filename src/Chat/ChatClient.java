@@ -1,4 +1,4 @@
-package chat;
+package Chat;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

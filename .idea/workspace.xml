@@ -2,9 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6dcc61-65d6-4cc5-878d-4dc0754bcb7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_39_bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_39_bin__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/ChatView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/DataBase/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/DataBase/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/DataBase/Service/DatabaseConnectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/MultiChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chat2/ServerFileThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chat/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$MessageReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$MessageReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$TextFieldAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient$TextFieldAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatServer$ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatServer$ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatApp/chat/ChatServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/ChatServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,49 +42,138 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-829">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <folding>
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <folding>
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test/Test1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://E:/java/jdk1.8/src.zip!/java/sql/Connection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="498" column="9" selection-start-line="498" selection-start-column="9" selection-end-line="498" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/chat/ChatClient.java">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="312">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#657#750#1" />
-                <element signature="class#TextFieldAdapter#0;class#ChatClient#0" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chat/ChatServer.java">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Service/DatabaseConnectionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="178">
+              <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#365#421#0" />
-                <element signature="e#446#527#0" />
-                <element signature="e#549#594#0" />
-                <element signature="e#720#966#0" />
-                <element signature="e#1038#1092#0" />
-                <element signature="e#1101#1297#0" />
-                <element signature="e#1119#1212#0" />
-                <element signature="e#1235#1287#0" />
-                <element signature="method#ClientThread#0;class#ClientThread#0;class#ChatServer#0" />
-                <element signature="e#2314#2382#0" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://E:/java/jdk1.8/src.zip!/java/lang/Thread.java">
+        <entry file="jar://E:/java/jdk1.8/src.zip!/java/sql/PreparedStatement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="747" selection-start-line="747" selection-end-line="747" />
+            <state relative-caret-position="419">
+              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Chat2/ClientFileThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +183,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -80,6 +191,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>192.168.1.185</find>
+      <find>isUser(userName, userPwd , )</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,12 +207,33 @@
         <option value="$PROJECT_DIR$/src/chat/Client/ChatClient.java" />
         <option value="$PROJECT_DIR$/src/chat/ChatServer.java" />
         <option value="$PROJECT_DIR$/src/chat/ChatClient.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/ChatView.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/d.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/MultiChat.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/ServerFileThread.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/ClientFileThread.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/Server.java" />
+        <option value="$PROJECT_DIR$/src/Test/Test.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/Login.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/Client.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/Database.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Dao.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Model.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Dao/Dao.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Model/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Model/User.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Database.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Service/DatabaseConnectionService.java" />
+        <option value="$PROJECT_DIR$/src/Test/Test1.java" />
+        <option value="$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDaoImpl.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="360" />
-    <option name="y" value="70" />
+    <option name="x" value="281" />
+    <option name="y" value="66" />
     <option name="width" value="1750" />
     <option name="height" value="1025" />
   </component>
@@ -110,7 +243,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ChatApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -121,13 +264,28 @@
             <path>
               <item name="ChatApp" type="58d84e3e:PackageViewProjectNode" />
               <item name="ChatApp" type="616d4139:PackageViewModuleNode" />
-              <item name="chat" type="1f31426a:PackageElementNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
             </path>
             <path>
               <item name="ChatApp" type="58d84e3e:PackageViewProjectNode" />
               <item name="ChatApp" type="616d4139:PackageViewModuleNode" />
-              <item name="chat" type="1f31426a:PackageElementNode" />
-              <item name="Client" type="1f31426a:PackageElementNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ChatApp" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+              <item name="mysql" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ChatApp" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+              <item name="mysql" type="1f31426a:PackageElementNode" />
+              <item name="jdbc" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -149,7 +307,44 @@
               <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chat" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Chat2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Chat2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="DataBase" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Chat2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="DataBase" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Chat2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="DataBase" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Chat2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="DataBase" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ChatApp" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ChatApp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -160,18 +355,23 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572911444060" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573054920528" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ChatApp.iml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\ChatApp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\ChatApp\lib" />
       <recent name="E:\PROJECT\ChatApp\src" />
       <recent name="E:\PROJECT\ChatApp" />
     </key>
@@ -188,13 +388,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChatClient(2)">
-    <configuration name="ChatClient(1)" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="chat.ChatClient" />
+  <component name="RunManager" selected="Application.Test1">
+    <configuration name="ChatClient(1)" type="Application" factoryName="Application" folderName="chat" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Chat.ChatClient" />
       <module name="ChatApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chat.*" />
+          <option name="PATTERN" value="Chat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -202,26 +402,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatClient(2)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.ChatClient" />
+    <configuration name="ChatClient(2)" type="Application" factoryName="Application" folderName="chat">
+      <option name="MAIN_CLASS_NAME" value="Chat.ChatClient" />
       <module name="ChatApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatClient(3)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.ChatClient" />
+    <configuration name="ChatClient(3)" type="Application" factoryName="Application" folderName="chat">
+      <option name="MAIN_CLASS_NAME" value="Chat.ChatClient" />
       <module name="ChatApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chat.ChatServer" />
+    <configuration name="ChatServer(2)" type="Application" factoryName="Application" folderName="chat">
+      <option name="MAIN_CLASS_NAME" value="Chat.ChatServer" />
+      <module name="ChatApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client1" type="Application" factoryName="Application" folderName="Chat2" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Chat2.Client" />
       <module name="ChatApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chat.*" />
+          <option name="PATTERN" value="Chat2.DataBase.Dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -229,24 +436,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer(2)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.ChatServer" />
+    <configuration name="Client2" type="Application" factoryName="Application" folderName="Chat2">
+      <option name="MAIN_CLASS_NAME" value="Chat2.Client" />
       <module name="ChatApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chat2.DataBase.Database" />
+      <module name="ChatApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chat2.DataBase.Dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" folderName="Chat2" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chat2.Server" />
+      <module name="ChatApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chat2.DataBase.Dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.Test1" />
+      <module name="ChatApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ChatServer(2)" />
       <item itemvalue="Application.ChatClient(2)" />
+      <item itemvalue="Application.ChatServer(2)" />
       <item itemvalue="Application.ChatClient(3)" />
       <item itemvalue="Application.ChatClient(1)" />
-      <item itemvalue="Application.ChatServer (1)" />
+      <item itemvalue="Application.Client2" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client1" />
+      <item itemvalue="Application.Test1" />
+      <item itemvalue="Application.Database" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Database" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client1" />
         <item itemvalue="Application.ChatClient(1)" />
-        <item itemvalue="Application.ChatServer (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -265,19 +518,21 @@
       <updated>1572847210166</updated>
       <workItem from="1572847212017" duration="1678000" />
       <workItem from="1572849433713" duration="1844000" />
-      <workItem from="1572851485505" duration="28466000" />
+      <workItem from="1572851485505" duration="28786000" />
+      <workItem from="1572926398290" duration="12021000" />
+      <workItem from="1573034457904" duration="14793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31988000" />
+    <option name="totallyTimeSpent" value="59122000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.096969694" visible="true" weight="0.22989276" />
-      <window_info id="Structure" order="1" sideWeight="0.9030303" side_tool="true" weight="0.22989276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.09667195" visible="true" weight="0.23659517" />
+      <window_info id="Structure" order="1" sideWeight="0.90332806" side_tool="true" weight="0.23659517" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -285,7 +540,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.9030303" side_tool="true" weight="0.22989276" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18768328" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19806094" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -293,9 +548,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20967741" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.08797654" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32991204" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -479,43 +734,291 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatServer.java">
+    <entry file="file://$PROJECT_DIR$/src/Chat/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+        <state relative-caret-position="2522">
+          <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#365#421#0" />
-            <element signature="e#446#527#0" />
-            <element signature="e#549#594#0" />
-            <element signature="e#720#966#0" />
-            <element signature="e#1038#1092#0" />
-            <element signature="e#1101#1297#0" />
-            <element signature="e#1119#1212#0" />
-            <element signature="e#1235#1287#0" />
             <element signature="method#ClientThread#0;class#ClientThread#0;class#ChatServer#0" />
-            <element signature="e#2314#2382#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://E:/java/jdk1.8/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="17992">
           <caret line="747" selection-start-line="747" selection-end-line="747" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatClient.java">
+    <entry file="file://$PROJECT_DIR$/src/Chat/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="27">
+          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#657#750#1" />
             <element signature="class#TextFieldAdapter#0;class#ChatClient#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/ServerFileThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#277#285#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.39-bin.jar!/com/mysql/jdbc/Driver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/jre/lib/rt.jar!/sun/reflect/DelegatingConstructorAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/ChatView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-676">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/javax/swing/JOptionPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="633" column="34" selection-start-line="633" selection-start-column="34" selection-end-line="633" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/MultiChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/javax/swing/JFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9048">
+          <caret line="386" column="16" selection-start-line="386" selection-start-column="16" selection-end-line="386" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/javax/swing/JTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10296">
+          <caret line="450" column="29" selection-start-line="450" selection-start-column="29" selection-end-line="450" selection-end-column="29" />
+          <folding>
+            <element signature="e#15536#15537#0" expanded="true" />
+            <element signature="e#15593#15594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47294">
+          <caret line="1924" column="16" selection-start-line="1924" selection-start-column="16" selection-end-line="1924" selection-end-column="16" />
+          <folding>
+            <element signature="e#68197#68198#0" expanded="true" />
+            <element signature="e#68254#68255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/jre/lib/rt.jar!/sun/security/validator/PKIXValidator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="293" selection-start-line="293" selection-end-line="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/java/sql/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="235" column="29" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.39-bin.jar!/com/mysql/jdbc/Util.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.39-bin.jar!/com/mysql/jdbc/StatementImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.39-bin.jar!/com/mysql/jdbc/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="2233" selection-start-line="2233" selection-end-line="2233" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-829">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/ClientFileThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/java/jdk1.8/src.zip!/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="498" column="9" selection-start-line="498" selection-start-column="9" selection-end-line="498" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Service/DatabaseConnectionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chat2/DataBase/Dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -523,6 +1026,30 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -536,7 +1063,19 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>12</last-edited>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ChatApp</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -560,6 +1099,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>mysql-connector-java-5.1.39-bin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
