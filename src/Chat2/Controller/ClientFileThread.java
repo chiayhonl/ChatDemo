@@ -1,11 +1,14 @@
-// ClientFileThread.java
-package Chat2.Util;
+package Chat2.Controller;
 
 import javax.swing.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
+/**
+ * @author Chiayhon
+ * @create 2019 - 11 - 07
+ */
 public class ClientFileThread extends Thread{
     private Socket socket = null;
     private JFrame chatViewJFrame = null;
@@ -40,8 +43,8 @@ public class ClientFileThread extends Thread{
                 long curLength = 0;
                 // 提示框选择结果，0为确定，1位取消
                 if(result == 0){
-					out.println("【" + userName + "】选择了接收文件！】");
-					out.flush();
+                    out.println("【" + userName + "】选择了接收文件！】");
+                    out.flush();
                     File userFile = new File("C:\\Users\\Administrator\\Desktop\\接收文件\\" + userName);
                     if(!userFile.exists()) {  // 新建当前用户的文件夹
                         userFile.mkdir();
@@ -52,8 +55,8 @@ public class ClientFileThread extends Thread{
                         fileWriter.write(buff, 0, length);
                         fileWriter.flush();
                         curLength += length;
-						out.println("【接收进度:" + curLength/totleLength*100 + "%】");
-						out.flush();
+                        out.println("【接收进度:" + curLength/totleLength*100 + "%】");
+                        out.flush();
                         if(curLength == totleLength) {  // 强制结束
                             break;
                         }

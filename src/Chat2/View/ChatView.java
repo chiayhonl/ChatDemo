@@ -1,14 +1,17 @@
 package Chat2.View;
 
 // ChatView.java
+
+import Chat2.Controller.ClientFileThread;
 import Chat2.Controller.ClientReadAndWriteThread;
-import Chat2.Util.ClientFileThread;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+
+;
 
 
 public class ChatView {

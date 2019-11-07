@@ -1,6 +1,5 @@
 package Chat2.Controller;
 
-import Chat2.Util.ClientFileThread;
 import Chat2.View.ChatView;
 
 import javax.swing.*;
@@ -8,10 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
@@ -136,3 +132,4 @@ public class ClientReadAndWriteThread extends Thread{
         }
     }
 }
+
