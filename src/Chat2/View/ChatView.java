@@ -2,23 +2,18 @@ package Chat2.View;
 
 // ChatView.java
 
+import Chat2.Controller.ClientChatController;
 import Chat2.Controller.ClientFileThread;
-import Chat2.Controller.ClientReadAndWriteThread;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
-
-;
-
 
 public class ChatView {
     String userName;  //由客户端登录时设置
     JTextField text;
     JTextArea textArea;
-    ClientReadAndWriteThread.ChatViewListen listener;
+    ClientChatController.ChatViewListen listener;
 
     // 构造函数
     public ChatView(String userName) {
@@ -48,14 +43,10 @@ public class ChatView {
         jp.add(openFileBtn);
 
         // 设置“打开文件”监听
-        openFileBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                showFileOpenDialog(jf);
-            }
-        });
+        openFileBtn.addActionListener(e -> showFileOpenDialog(jf));
 
         // 设置“发送”监听
-        listener = new ClientReadAndWriteThread().new ChatViewListen();
+        listener = new ClientChatController().new ChatViewListen();
         listener.setJTextField(text);  // 调用PoliceListen类的方法
         listener.setJTextArea(textArea);
         listener.setChatViewJf(jf);
@@ -71,7 +62,7 @@ public class ChatView {
         // 创建一个默认的文件选择器
         JFileChooser fileChooser = new JFileChooser();
         // 设置默认显示的文件夹
-        fileChooser.setCurrentDirectory(new File("C:/Users/Samven/Desktop"));
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Administrator\\Desktop"));
         // 添加可用的文件过滤器（FileNameExtensionFilter 的第一个参数是描述, 后面是需要过滤的文件扩展名）
 //        fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("(txt)", "txt"));
         // 设置默认使用的文件过滤器（FileNameExtensionFilter 的第一个参数是描述, 后面是需要过滤的文件扩展名 可变参数）

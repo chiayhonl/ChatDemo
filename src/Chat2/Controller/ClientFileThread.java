@@ -9,6 +9,8 @@ import java.net.Socket;
  * @author Chiayhon
  * @create 2019 - 11 - 07
  */
+// ClientFileThread.java
+
 public class ClientFileThread extends Thread{
     private Socket socket = null;
     private JFrame chatViewJFrame = null;
@@ -43,9 +45,10 @@ public class ClientFileThread extends Thread{
                 long curLength = 0;
                 // 提示框选择结果，0为确定，1位取消
                 if(result == 0){
-                    out.println("【" + userName + "】选择了接收文件！】");
-                    out.flush();
+					out.println("【" + userName + "】选择了接收文件！");
+					out.flush();
                     File userFile = new File("C:\\Users\\Administrator\\Desktop\\接收文件\\" + userName);
+                    out.println("创建了文件夹");
                     if(!userFile.exists()) {  // 新建当前用户的文件夹
                         userFile.mkdir();
                     }
@@ -55,8 +58,8 @@ public class ClientFileThread extends Thread{
                         fileWriter.write(buff, 0, length);
                         fileWriter.flush();
                         curLength += length;
-                        out.println("【接收进度:" + curLength/totleLength*100 + "%】");
-                        out.flush();
+//						out.println("【接收进度:" + curLength/totleLength*100 + "%】");
+//						out.flush();
                         if(curLength == totleLength) {  // 强制结束
                             break;
                         }
@@ -67,6 +70,7 @@ public class ClientFileThread extends Thread{
                     JOptionPane.showMessageDialog(chatViewJFrame, "文件存放地址：\n" +
                             "C:\\Users\\Administrator\\Desktop\\接收文件\\" +
                             userName + "\\" + textName, "提示", JOptionPane.INFORMATION_MESSAGE);
+
                 }
                 else {  // 不接受文件
                     while((length = fileIn.read(buff)) > 0) {
@@ -78,7 +82,9 @@ public class ClientFileThread extends Thread{
                 }
                 fileWriter.close();
             }
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     // 客户端发送文件

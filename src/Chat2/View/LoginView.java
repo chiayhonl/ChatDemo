@@ -7,7 +7,7 @@ package Chat2.View;
 // Login.java
 
 
-import Chat2.Controller.ClientReadAndWriteThread;
+import Chat2.Controller.ClientChatController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +15,7 @@ import java.awt.*;
 public class LoginView {
     JTextField textField = null;
     JPasswordField pwdField = null;
-    ClientReadAndWriteThread.LoginListen listener=null;
+    ClientChatController.LoginListen listener=null;
 
 
     // 构造函数
@@ -52,7 +52,7 @@ public class LoginView {
         jp.add(jp2, BorderLayout.CENTER);
 
         // 设置监控
-        listener = new ClientReadAndWriteThread().new LoginListen();  // 新建监听类
+        listener = new ClientChatController().new LoginListen();  // 新建监听类
         listener.setJTextField(textField);  // 调用PoliceListen类的方法
         listener.setJPasswordField(pwdField);
         listener.setJFrame(jf);

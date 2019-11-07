@@ -1,7 +1,6 @@
 package Test;
 
-import Chat2.Model.User;
-import Chat2.Service.UserServiceImpl;
+import java.io.File;
 
 /**
  * @author Chiayhon
@@ -11,12 +10,7 @@ import Chat2.Service.UserServiceImpl;
 
 public class Test1 {
     public static void main(String[] args) throws Exception {
-        UserServiceImpl userService = new UserServiceImpl();
-        User user = new User();
-        user.setPassword("1234");
-        user.setUsername("hello");
-        user.setSalt(1234);
-        user.setId(9);
-        userService.queryResult(user);
+        File file = new File("C:\\Users\\Administrator\\Desktop\\接收文件\\" + "a.txt" );
+        file.createNewFile();
     }
 }
