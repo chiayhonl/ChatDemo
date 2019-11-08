@@ -16,12 +16,19 @@ import java.net.Socket;
  *  之所以把登录和发送的监听放在这里，是因为要共享一些数据，比如mySocket,textArea
  */
 public class ClientChatController extends Thread{
+
     static Socket mySocket = null;  // 一定要加上static，否则新建线程时会清空
+
     static JTextField textInput;
+
     static JTextArea textShow;
+
     static JFrame chatViewJFrame;
+
     static BufferedReader in = null;
+
     static PrintWriter out = null;
+
     static String userName;
 
     // 用于接收从服务端发送来的消息
@@ -38,8 +45,11 @@ public class ClientChatController extends Thread{
 
     /**********************登录监听(内部类)**********************/
     public class LoginListen implements ActionListener {
+
         JTextField textField;
+
         JPasswordField pwdField;
+
         JFrame loginJFrame;  // 登录窗口本身
 
         ChatView chatView = null;
@@ -53,19 +63,25 @@ public class ClientChatController extends Thread{
         public void setJFrame(JFrame jFrame) {
             this.loginJFrame = jFrame;
         }
+
         public void actionPerformed(ActionEvent event) {
             userName = textField.getText();
             String userPwd = String.valueOf(pwdField.getPassword());  // getPassword方法获得char数组
 
-
+            //按钮状态
             int status = -1;
             if(event.getActionCommand().equals("登录"))
                 status = 0;
             if(event.getActionCommand().equals("注册"))
                 status = 1;
 
-            if(new LoginController().verification(userName , userPwd , status)) {  // 密码为123并且用户名长度大于等于1
+            //登录状态
+            int status2 = new LoginController().verification(userName , userPwd , status);
+
+            if(status2 == 1) {
+
                 chatView = new ChatView(userName);  // 新建聊天窗口,设置聊天窗口的用户名（静态）
+
                 // 建立和服务器的联系
                 try {
                     InetAddress addr = InetAddress.getByName(null);  // 获取主机地址
@@ -77,15 +93,23 @@ public class ClientChatController extends Thread{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 // 新建普通读写线程并启动
                 ClientChatController readAndPrint = new ClientChatController();
                 readAndPrint.start();
+
                 // 新建文件读写线程并启动
                 ClientFileThread fileThread = new ClientFileThread(userName, chatViewJFrame, out);
                 fileThread.start();
-            }
-            else {
+
+            } else if(status2 == 0){
+                JOptionPane.showMessageDialog(loginJFrame, "用户名已存在！", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == -1){
                 JOptionPane.showMessageDialog(loginJFrame, "账号或密码错误，请重新输入！", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == -2){
+                JOptionPane.showMessageDialog(loginJFrame, "账号或密码为空！！", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == -3){
+                JOptionPane.showMessageDialog(loginJFrame, "未知错误", "提示", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
