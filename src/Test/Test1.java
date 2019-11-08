@@ -1,6 +1,6 @@
 package Test;
 
-import java.io.File;
+import java.net.InetAddress;
 
 /**
  * @author Chiayhon
@@ -10,7 +10,7 @@ import java.io.File;
 
 public class Test1 {
     public static void main(String[] args) throws Exception {
-        File file = new File("C:\\Users\\Administrator\\Desktop\\接收文件\\" + "a.txt" );
-        file.createNewFile();
+        InetAddress addr = InetAddress.getByName("192.168.1.101");
+        System.out.println(addr);
     }
 }
