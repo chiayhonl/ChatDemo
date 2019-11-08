@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class MultiChatView {
+public class  ChatHistoryView {
     JTextArea textArea;
 
     // 用于向文本区域添加信息
@@ -15,7 +15,7 @@ public class MultiChatView {
     }
 
     // 构造函数
-    public MultiChatView() {
+    public ChatHistoryView() {
         init();
     }
 
@@ -25,7 +25,7 @@ public class MultiChatView {
         jf.setResizable(false);  // 设置为不可缩放
 
         JPanel jp = new JPanel();  // 新建容器
-        JLabel lable = new JLabel("==欢迎来到多人聊天系统（服务器端）==");
+        JLabel lable = new JLabel("==后台记录==");
         textArea = new JTextArea(23, 38);  // 新建文本区域并设置长宽
         textArea.setEditable(false);  // 设置为不可修改
         JScrollPane scroll = new JScrollPane(textArea);  // 设置滚动面板（装入textArea）

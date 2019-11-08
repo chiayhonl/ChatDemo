@@ -1,8 +1,11 @@
 package Chat2.Controller;
 
-import Chat2.View.MultiChatView;
+import Chat2.View.ChatHistoryView;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -18,12 +21,12 @@ public class ServerChatController {
 
     static Socket socket = null;
 
-    MultiChatView multiChat = null;
+    ChatHistoryView chatHistoryView = null;
 
     public static List<Socket> list = new ArrayList<>();  // 存储客户端
 
-    public ServerChatController(MultiChatView multiChat) {
-        this.multiChat = multiChat;
+    public ServerChatController(ChatHistoryView chatHistoryView) {
+        this.chatHistoryView = chatHistoryView;
     }
 
     public void monitor(){
@@ -37,7 +40,7 @@ public class ServerChatController {
                 socket = server.accept();  // 等待连接
                 list.add(socket);  // 添加当前客户端到列表
                 // 在服务器端对客户端开启相应的线程
-                ServerReadAndPrintThread readAndPrint = new ServerReadAndPrintThread(socket, multiChat);
+                ServerReadAndPrintThread readAndPrint = new ServerReadAndPrintThread(socket, chatHistoryView);
                 readAndPrint.start();
             }
         } catch (IOException e1) {
@@ -51,11 +54,11 @@ public class ServerChatController {
      */
     class ServerReadAndPrintThread extends Thread{
         Socket nowSocket = null;
-        MultiChatView multiChat = null;
+        ChatHistoryView multiChat = null;
         BufferedReader in =null;
         PrintWriter out = null;
         // 构造函数
-        public ServerReadAndPrintThread(Socket s, MultiChatView multiChat) {
+        public ServerReadAndPrintThread(Socket s, ChatHistoryView multiChat) {
             this.multiChat = multiChat;  // 获取多人聊天系统界面
             this.nowSocket = s;  // 获取当前客户端
         }
@@ -70,7 +73,7 @@ public class ServerChatController {
                     for(Socket socket: ServerChatController.list) {
                         out = new PrintWriter(socket.getOutputStream());  // 对每个客户端新建相应的socket套接字
                         if(socket == nowSocket) {  // 发送给当前客户端
-                            out.println("(你)" + str);
+                            out.println(str);
                         }
                         else {  // 发送给其它客户端
                             out.println(str);

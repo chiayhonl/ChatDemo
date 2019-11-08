@@ -8,9 +8,9 @@ import Chat2.Model.User;
  */
 public interface UserService {
 
-    boolean Login(User user);
+    int Login(User user);
 
-    boolean register(User user);
+    int register(User user);
 
-    boolean queryResult(User user);
+    int queryResult(User user);
 }

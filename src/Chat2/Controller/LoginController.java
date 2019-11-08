@@ -3,6 +3,7 @@ package Chat2.Controller;
 import Chat2.Model.User;
 import Chat2.Service.UserService;
 import Chat2.Service.UserServiceImpl;
+import static Chat2.Util.StatusCode.*;
 
 /**
  * @author Chiayhon
@@ -19,20 +20,18 @@ public class LoginController {
         user.setSalt(System.currentTimeMillis() % 100);
 
         /**
-         * @param res
-         *
-         * 状态码：-3:未知错误 -2:用户名或密码为空 -1：用户名或密码错误  0：用户名已存在  1：登陆成功
+         * @param 状态码：
+         * -4:未知错误 -3:用户名或密码为空  -2:用户名或密码错误 -1：用户名不存在  0：用户名已存在  1：登陆成功
          */
-        int  res = -3;//默认登录失败
 
         if(userName.equals("") || userPwd.equals("")){
-            return -2;
+            return NAME_OR_PASSWORD_NULL;
         }
 
         switch (status){
-            case 0: res = userService.Login(user)? 1 : -1;break;
-            case 1: res = userService.register(user)? 1 : 0;break;
+            case 0: return userService.Login(user);
+            case 1: return userService.register(user);
         }
-        return res;
+        return NAME_OR_PASSWORD_NULL;
     }
 }

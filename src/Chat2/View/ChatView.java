@@ -27,8 +27,8 @@ public class ChatView {
         jf.setResizable(false);  // 缩放为不能缩放
 
         JPanel jp = new JPanel();
-        JLabel lable = new JLabel("用户：" + userName);
-        textArea = new JTextArea("***************登录成功，欢迎来到多人聊天室！****************\n",12, 35);
+        JLabel lable = new JLabel("用户名：" + userName);
+        textArea = new JTextArea("***************登录成功，欢迎加入群聊！****************\n",12, 35);
         textArea.setEditable(false);  // 设置为不可修改
         JScrollPane scroll = new JScrollPane(textArea);  // 设置滚动面板（装入textArea）
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);  // 显示垂直条

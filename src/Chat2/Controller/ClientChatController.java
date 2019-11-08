@@ -7,9 +7,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static Chat2.Util.StatusCode.*;
 
 /**
  *  负责客户端的读和写，以及登录和发送的监听
@@ -30,6 +37,8 @@ public class ClientChatController extends Thread{
     static PrintWriter out = null;
 
     static String userName;
+
+    SimpleDateFormat dtf2 = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
 
     // 用于接收从服务端发送来的消息
     public void run() {
@@ -78,7 +87,7 @@ public class ClientChatController extends Thread{
             //登录状态
             int status2 = new LoginController().verification(userName , userPwd , status);
 
-            if(status2 == 1) {
+            if(status2 == SUCCESS) {
 
                 chatView = new ChatView(userName);  // 新建聊天窗口,设置聊天窗口的用户名（静态）
 
@@ -88,7 +97,7 @@ public class ClientChatController extends Thread{
                     mySocket = new Socket(addr,8081);  // 客户端套接字
                     loginJFrame.setVisible(false);  // 隐藏登录窗口
                     out = new PrintWriter(mySocket.getOutputStream());  // 输出流
-                    out.println("用户【" + userName + "】进入聊天室！");  // 发送用户名给服务器
+                    out.println("***系统提示：用户【" + userName + "】进入聊天室！***");  // 发送用户名给服务器
                     out.flush();  // 清空缓冲区out中的数据
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -102,14 +111,16 @@ public class ClientChatController extends Thread{
                 ClientFileThread fileThread = new ClientFileThread(userName, chatViewJFrame, out);
                 fileThread.start();
 
-            } else if(status2 == 0){
-                JOptionPane.showMessageDialog(loginJFrame, "用户名已存在！", "提示", JOptionPane.WARNING_MESSAGE);
-            } else if(status2 == -1){
-                JOptionPane.showMessageDialog(loginJFrame, "账号或密码错误，请重新输入！", "提示", JOptionPane.WARNING_MESSAGE);
-            } else if(status2 == -2){
-                JOptionPane.showMessageDialog(loginJFrame, "账号或密码为空！！", "提示", JOptionPane.WARNING_MESSAGE);
-            } else if(status2 == -3){
-                JOptionPane.showMessageDialog(loginJFrame, "未知错误", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == USER_EXIST){
+                JOptionPane.showMessageDialog(loginJFrame, "用户名已存在！("+status2+")", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == USER_NOT_EXIST){
+                JOptionPane.showMessageDialog(loginJFrame, "用户名不存在！("+status2+")", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == NAME_OR_PASSWORD_ERROR){
+                JOptionPane.showMessageDialog(loginJFrame, "账号或密码错误，请重新输入！！("+status2+")", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == NAME_OR_PASSWORD_NULL){
+                JOptionPane.showMessageDialog(loginJFrame, "账号或密码为空！("+status2+")", "提示", JOptionPane.WARNING_MESSAGE);
+            } else if(status2 == UNKNOWERROR){
+                JOptionPane.showMessageDialog(loginJFrame, "未知错误!("+status2+")", "提示", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
@@ -129,7 +140,7 @@ public class ClientChatController extends Thread{
             // 设置关闭聊天界面的监听
             chatViewJFrame.addWindowListener(new WindowAdapter() {
                 public void windowClosing(WindowEvent e) {
-                    out.println("用户【" + userName + "】离开聊天室！");
+                    out.println("***系统提示：用户【" + userName + "】离开聊天室！***");
                     out.flush();
                     System.exit(0);
                 }
@@ -146,7 +157,7 @@ public class ClientChatController extends Thread{
                     JOptionPane.showMessageDialog(chatViewJFrame, "输入为空，请重新输入！", "提示", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
-                out.println(userName + "说：" + str);  // 输出给服务端
+                out.println("   " + userName + "   " + dtf2.format(new Date()) + '\n' + "       " + str);  // 输出给服务端
                 out.flush();  // 清空缓冲区out中的数据
 
                 textInput.setText("");  // 清空文本框
